@@ -86,3 +86,63 @@ var newAge = info.map(function(info) {
 });
 
 //console.log(newAge) ;
+
+
+
+function operationMaker(operation) {
+  
+  function doSomething(num1,num2) {
+    
+    if (operation === "add") {
+      var sum = num1 + num2;
+    }
+    
+    else if (operation === "subtract") {
+      var diff = num1 - num2;
+    }
+    
+    else if (operation === "mult") {
+      var product = num1 * num2;
+    }
+    
+    else {
+      var ratio = num1 / num2;
+    }
+    
+  } 
+  
+  doSomething(4,2);
+  
+}
+operationMaker(add);
+
+
+
+
+
+function operationMaker(operation) {
+  
+  function doSomething(num1,num2) {
+    
+    if (operation === "add") {
+      return num1 + num2;
+    }
+    
+    else if (operation === "subtract") {
+      return num1 - num2;
+    }
+    
+    else if (operation === "mult") {
+      return num1 * num2;
+    }
+    
+    else {
+      return num1 / num2;
+    }
+    
+  } 
+  
+  
+  return doSomething ;
+}
+operationMaker("add")(10, 20)
