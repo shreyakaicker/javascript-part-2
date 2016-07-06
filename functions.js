@@ -88,38 +88,6 @@ var newAge = info.map(function(info) {
 //console.log(newAge) ;
 
 
-
-function operationMaker(operation) {
-  
-  function doSomething(num1,num2) {
-    
-    if (operation === "add") {
-      var sum = num1 + num2;
-    }
-    
-    else if (operation === "subtract") {
-      var diff = num1 - num2;
-    }
-    
-    else if (operation === "mult") {
-      var product = num1 * num2;
-    }
-    
-    else {
-      var ratio = num1 / num2;
-    }
-    
-  } 
-  
-  doSomething(4,2);
-  
-}
-operationMaker(add);
-
-
-
-
-
 function operationMaker(operation) {
   
   function doSomething(num1,num2) {
@@ -146,3 +114,26 @@ function operationMaker(operation) {
   return doSomething ;
 }
 operationMaker("add")(10, 20)
+
+
+// Another way to do this
+
+function add(a,b) {return a+b;}
+function subtract(a,b) {return a-b;}
+function mult(a,b) {return a*b;}
+function ratio(a,b) {return a/b;}
+
+function operationMaker(operation) {
+    
+    
+        
+    if (operation === "add") { return add; }
+    else if (operation === "subtract") { return subtract; }
+    else if (operation === "mult") { return mult; }
+    else  { return ratio; }
+    
+
+}
+operationMaker("ratio")(9,3)
+
+
