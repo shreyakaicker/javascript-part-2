@@ -64,9 +64,25 @@ info.sort(function (a, b) {
 This function should take a number and return its square. 
 Then, use this function with map on an array of 
 numbers to check the result.*/
+
 var numbers = [1, 2, 3, 4, 5, 9];
 var doubles = numbers.map(function(num) {
   return num * num;
 });
 
 //console.log(doubles) ;
+
+
+
+
+/*Create a function that can be used with Array.prototype.map.
+This function should be able to take an object and square its 
+“num” property. Then, use this function with map on an array of 
+objects each containming a “num” property.*/
+
+var info = [{ name : "Shreya" , num : 15 } ,{name : "Ziad" , num : 33} ]
+var newAge = info.map(function(info) {
+  return info.num * info.num;
+});
+
+//console.log(newAge) ;
