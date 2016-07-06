@@ -1,3 +1,6 @@
+//## Warriors!
+
+
 function Warriors(name,gender) {
     
     this.name = name;
