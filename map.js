@@ -11,6 +11,7 @@ Tile.prototype = {
          else if( this.type === "grass") { return true ; }
          else { return false ; }
     }
+    console.log(isWalkable)
 }
 
 
@@ -41,10 +42,22 @@ Map.prototype = {
 
     getWalkableOutput: function() {
      
-      },
-
+     if (this.type === "sand") {return 'O';}
+     else if (this.type === "grass") {return 'O';}
+     else  {return 'X';}
+    },
     getAsciiOutput: function() {
-
+     if (this.type === "sand") {return '*';}
+     else if (this.type === "grass") {return ':';}
+     else  {return '~';}
     }
 
 };
+
+var tile1 = new Tile("sand")
+var tile2 = new Tile("grass")
+var tile3 = new Tile("water")
+
+var map1 = new Map(5,10)
+console.log(tile1,tile2,tile3)
+console.log(map1)
