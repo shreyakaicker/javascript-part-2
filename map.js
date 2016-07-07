@@ -32,13 +32,13 @@ function Map(width,height) {
     for(var i=0; i < width; i++) {
         var array2 = [];
         
-        for(var x=0; i < height; i++) {
-            var tile = new Tile()
+        for(var x=0; x < height; x++) {
+            var tile = new Tile(randomType())
             array2.push(tile)
         }
         array1.push(array2) ;
     }
-        
+
    this.tiles = array1 ;
     
    
@@ -61,11 +61,7 @@ Map.prototype = {
     }
 
 };
+var newMap = new Map(4, 5);
 
-var tile1 = new Tile("sand")
-var tile2 = new Tile("grass")
-var tile3 = new Tile("water")
-
-var map1 = new Map(5,10)
-console.log(tile1,tile2,tile3)
-console.log(map1)
+console.log(newMap)
+console.log()
