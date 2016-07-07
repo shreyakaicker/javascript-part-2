@@ -12,3 +12,27 @@ Tile.prototype = {
          else { return false ; }
     }
 }
+
+
+function Map(width,height) {
+    
+    this.width = width;
+    this.height = height;
+    this.tiles = ;
+    
+   
+}
+
+
+
+Map.prototype = {
+
+    getWalkableOutput: function() {
+     
+      },
+
+    getAsciiOutput: function() {
+
+    }
+
+};
