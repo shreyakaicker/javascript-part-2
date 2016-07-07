@@ -11,9 +11,17 @@ Tile.prototype = {
          else if( this.type === "grass") { return true ; }
          else { return false ; }
     }
-    console.log(isWalkable)
+    
 }
 
+
+function randomType() {
+    var randomInput = Math.random() ;
+    if (randomInput < 0.33) {return 'grass';}
+     else if (randomInput < 0.67) {return 'sand';}
+     else  {return 'water';}
+    
+}
 
 function Map(width,height) {
     
